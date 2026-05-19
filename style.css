@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -15,10 +16,11 @@ body {
   font-family: "Inter", Arial, sans-serif;
   line-height: 1.6;
 }
+
 h1, h2, h3, .logo {
   font-family: "Playfair Display", Georgia, serif;
 }
-/* NAVBAR */
+
 nav {
   position: sticky;
   top: 0;
@@ -34,7 +36,7 @@ nav {
 
 .logo {
   color: #c98fa1;
-  font-size: 24px;
+  font-size: 26px;
 }
 
 .nav-links a {
@@ -48,7 +50,6 @@ nav {
   color: #c98fa1;
 }
 
-/* HERO */
 .hero {
   min-height: 85vh;
   padding: 90px 8%;
@@ -65,6 +66,7 @@ nav {
   letter-spacing: 3px;
   font-size: 14px;
   margin-bottom: 18px;
+  font-weight: 700;
 }
 
 h1 {
@@ -72,15 +74,15 @@ h1 {
   line-height: 1.05;
   max-width: 850px;
   margin-bottom: 22px;
+  color: #3b2f2a;
 }
 
 .hero-text {
   font-size: 20px;
-  max-width: 700px;
+  max-width: 760px;
   color: #5a463d;
 }
 
-/* BUTTONS */
 .buttons {
   margin-top: 32px;
 }
@@ -88,29 +90,34 @@ h1 {
 .buttons a {
   display: inline-block;
   margin-right: 14px;
+  margin-bottom: 12px;
   padding: 13px 22px;
   border-radius: 999px;
   text-decoration: none;
   color: white;
   background: #aeb89f;
   transition: 0.2s;
+  font-weight: 600;
 }
 
 .buttons a:nth-child(2) {
   background: #c98fa1;
 }
 
+.buttons a:nth-child(3) {
+  background: #7f8b68;
+}
+
 .buttons a:hover {
   transform: translateY(-3px);
 }
 
-/* GENERAL SECTIONS */
 section {
   padding: 80px 8%;
 }
 
 section h2 {
-  font-size: 38px;
+  font-size: 42px;
   margin-bottom: 24px;
   color: #7f8b68;
 }
@@ -121,20 +128,20 @@ section > p {
   color: #5a463d;
 }
 
-/* PROJECTS AND SKILLS */
 .project-grid,
-.skills-grid {
+.skills-grid,
+.experience-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(59, 47, 42, 0.12);
   border-radius: 28px;
   padding: 30px;
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.07);
+  box-shadow: 0 18px 45px rgba(59, 47, 42, 0.08);
   transition: 0.2s;
 }
 
@@ -144,7 +151,7 @@ section > p {
 
 .card h3 {
   color: #c98fa1;
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 12px;
 }
 
@@ -152,110 +159,49 @@ section > p {
   color: #5a463d;
 }
 
-.project-link {
+.project-link,
+.experience-link {
   display: block;
   text-decoration: none;
   color: inherit;
 }
 
-.project-link span {
+.project-link *,
+.experience-link * {
+  text-decoration: none;
+}
+
+.project-link span,
+.experience-link span {
   display: inline-block;
-  margin-top: 18px;
+  margin-top: 14px;
   color: #7f8b68;
-  font-weight: bold;
+  font-weight: 700;
 }
 
-.project-page {
-  max-width: 950px;
-  margin: 0 auto;
-}
-
-.project-page h1 {
-  font-size: 56px;
-  margin-bottom: 24px;
-}
-
-.project-page h2 {
-  margin-top: 50px;
-}
-
-.back-button {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 12px 20px;
-  background: #aeb89f;
-  color: white;
-  text-decoration: none;
-  border-radius: 999px;
-}
-
-.project-buttons {
-  margin-top: 35px;
-  margin-bottom: 20px;
-}
-
-.project-buttons a {
-  display: inline-block;
-  padding: 12px 20px;
-  background: #c98fa1;
-  color: white;
-  text-decoration: none;
-  border-radius: 999px;
-  font-weight: bold;
+.experience-item {
+  background: rgba(255, 255, 255, 0.78);
+  border-left: 6px solid #e8b8c8;
+  padding: 24px 28px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(59, 47, 42, 0.06);
   transition: 0.2s;
 }
 
-.project-buttons a:hover {
-  transform: translateY(-3px);
-  background: #b77f91;
-}
-
-/* EXPERIENCE */
-.experience-item {
-  background: white;
-  border-left: 6px solid #e8b8c8;
-  padding: 22px 26px;
-  margin-bottom: 18px;
-  border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+.experience-item:hover {
+  transform: translateY(-5px);
 }
 
 .experience-item h3 {
   color: #c98fa1;
   margin-bottom: 4px;
+  font-size: 24px;
 }
 
-.experience-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
+.experience-item p {
+  color: #5a463d;
 }
 
-.experience-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  transition: 0.2s;
-}
-
-.experience-link:hover {
-  transform: translateY(-5px);
-}
-
-.experience-link span {
-  display: inline-block;
-  margin-top: 14px;
-  color: #7f8b68;
-  font-weight: bold;
-}
-
-@media (max-width: 800px) {
-  .experience-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* CONTACT */
 #contact {
   background: #aeb89f;
   color: white;
@@ -283,7 +229,7 @@ section > p {
   color: #7f8b68;
   text-decoration: none;
   border-radius: 999px;
-  font-weight: bold;
+  font-weight: 700;
   transition: 0.2s;
 }
 
@@ -292,7 +238,66 @@ section > p {
   background: #f7f1e8;
 }
 
-/* MOBILE */
+.project-page {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.project-page h1 {
+  font-size: 56px;
+  margin-bottom: 24px;
+}
+
+.project-page h2 {
+  margin-top: 50px;
+}
+
+.project-page p {
+  color: #5a463d;
+  font-size: 18px;
+  max-width: 850px;
+}
+
+.project-buttons {
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+
+.project-buttons a {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #c98fa1;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: 0.2s;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.project-buttons a:hover {
+  transform: translateY(-3px);
+  background: #b77f91;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 20px;
+  background: #aeb89f;
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: 0.2s;
+}
+
+.back-button:hover {
+  transform: translateY(-3px);
+  background: #7f8b68;
+}
+
 @media (max-width: 800px) {
   nav {
     flex-direction: column;
@@ -313,6 +318,10 @@ section > p {
     font-size: 46px;
   }
 
+  .project-page h1 {
+    font-size: 42px;
+  }
+
   .hero {
     padding: 70px 6%;
   }
@@ -322,7 +331,8 @@ section > p {
   }
 
   .project-grid,
-  .skills-grid {
+  .skills-grid,
+  .experience-grid {
     grid-template-columns: 1fr;
   }
 }

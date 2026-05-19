@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeuroPrint | Sharon Lee</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <nav>
+    <h2 class="logo">Sharon Lee</h2>
+    <div class="nav-links">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="project-page">
+    <p class="tag">PROJECT 03</p>
+
+    <h1>NeuroPrint</h1>
+
+    <p class="hero-text">
+      NeuroPrint is a motion-monitoring platform for Parkinson’s patients that uses
+      computer vision and guided movement analysis to track motor progression, detect
+      meaningful changes over time, and help clinicians intervene earlier with objective data.
+    </p>
+
+    <h2>Inspiration</h2>
+    <p>
+      NeuroPrint was inspired by a gap in Parkinson’s care: meaningful motor changes can
+      happen between clinic visits, but traditional evaluations are expensive and often only
+      capture a short snapshot in a controlled environment. Our goal was to make monitoring
+      more continuous, objective, and accessible from home.
+    </p>
+
+    <h2>What It Does</h2>
+    <p>
+      NeuroPrint guides users through structured movement tasks, records their performance,
+      and analyzes progression over time. Using computer vision, it tracks body movement,
+      identifies when a protocol has been completed, and stores each session for later review.
+    </p>
+
+    <p>
+      After multiple recordings, NeuroPrint models a patient’s expected performance trend
+      and flags meaningful deviations so doctors can review anomalies or sudden changes.
+    </p>
+
+    <h2>How We Built It</h2>
+    <p>
+      We built NeuroPrint as a full-stack application using FastAPI and SQLite on the backend
+      and Vite, React, HTML, and CSS on the frontend. For motion tracking, we used MediaPipe
+      to extract key body landmarks from video.
+    </p>
+
+    <p>
+      We analyzed landmark angles, distances, and timing to determine whether a patient
+      completed the required action correctly. We also added voiced movement guidance,
+      start-position checks before recording, linear regression for baseline progression
+      modeling, SMTP clinician notifications, and explored Gemini API as a fallback for
+      higher-level video review.
+    </p>
+
+    <h2>Challenges</h2>
+    <p>
+      One major challenge was distinguishing real symptom progression from poor recordings.
+      If a patient was not properly positioned in frame, the result could look like worsening
+      movement even if the issue was only camera setup. This pushed us to improve our
+      position checks and guidance system.
+    </p>
+
+    <p>
+      Another challenge was balancing model sophistication and reliability. Linear regression
+      gave us an explainable baseline, while more advanced models required more data and
+      stronger calibration to avoid unstable or misleading results.
+    </p>
+
+    <h2>Accomplishments</h2>
+    <p>
+      We built a system that can guide patients, automate recording, analyze movement,
+      model progression, and present results in a clinician-friendly dashboard. The platform
+      was able to distinguish between stable patients and patients with worsening symptoms
+      in trials.
+    </p>
+
+    <h2>Skills Used</h2>
+    <p>
+      Python, FastAPI, SQLite, React, Vite, HTML, CSS, JavaScript, MediaPipe, Computer Vision,
+      Linear Regression, SMTP, Gemini API, Healthcare Technology, UI/UX Design
+    </p>
+
+    <h2>What I Learned</h2>
+    <p>
+      NeuroPrint taught me that healthcare technology must be more than technically accurate.
+      It also needs to be usable, interpretable, and reliable in real-world conditions. Small
+      issues like framing, visibility, and timing can significantly affect computer vision systems,
+      especially in health-related applications.
+    </p>
+
+    <h2>What's Next</h2>
+    <p>
+      Future improvements include stronger progression modeling, more supported movement protocols,
+      better clinician alerting, and a refined dashboard for long-term patient review.
+    </p>
+
+    <div class="project-buttons">
+      <a href="https://devpost.com/software/neuroprint-cky41g" target="_blank">
+        View on Devpost
+      </a>
+    </div>
+
+    <a class="back-button" href="../index.html#projects">← Back to Projects</a>
+  </section>
+
+</body>
+</html>
